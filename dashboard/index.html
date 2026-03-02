@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lustgrow BI Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #222537;
+      --accent: #00d084;
+      --accent2: #7c3aed;
+      --accent3: #f59e0b;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --border: #2d3148;
+      --red: #ef4444;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), #00a865);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .logo h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .logo span {
+      font-size: 12px;
+      color: var(--muted);
+      display: block;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .badge {
+      background: rgba(0, 208, 132, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(0, 208, 132, 0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .date-badge {
+      background: var(--surface2);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    main {
+      padding: 24px 32px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 24px;
+      background: var(--surface);
+      padding: 4px;
+      border-radius: 10px;
+      width: fit-content;
+      border: 1px solid var(--border);
+    }
+
+    .tab {
+      padding: 8px 20px;
+      border-radius: 7px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tab.active {
+      background: var(--accent2);
+      color: white;
+    }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .kpi-card.green::before { background: var(--accent); }
+    .kpi-card.purple::before { background: var(--accent2); }
+    .kpi-card.amber::before { background: var(--accent3); }
+    .kpi-card.red::before { background: var(--red); }
+
+    .kpi-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .kpi-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .kpi-change {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .kpi-change.up { color: var(--accent); }
+    .kpi-change.down { color: var(--red); }
+
+    .kpi-icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 24px;
+      opacity: 0.4;
+    }
+
+    /* Charts grid */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .charts-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .chart-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .chart-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .chart-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 220px;
+    }
+
+    .chart-container.tall {
+      height: 280px;
+    }
+
+    /* Table */
+    .table-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(45, 49, 72, 0.5);
+      color: var(--text);
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .tag.green { background: rgba(0,208,132,0.15); color: var(--accent); }
+    .tag.purple { background: rgba(124,58,237,0.15); color: #a78bfa; }
+    .tag.amber { background: rgba(245,158,11,0.15); color: var(--accent3); }
+
+    /* Store selector */
+    .store-selector {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .store-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .store-btn.active {
+      border-color: var(--accent);
+      background: rgba(0, 208, 132, 0.08);
+    }
+
+    .store-btn:hover { border-color: var(--accent); }
+
+    .store-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .store-logo.tn { background: #1d9bf0; color: white; }
+    .store-logo.ml { background: #ffe600; color: #1a1a1a; }
+
+    .store-info h3 { font-size: 14px; font-weight: 600; }
+    .store-info p { font-size: 11px; color: var(--muted); }
+
+    .store-status {
+      margin-left: auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    /* Blog section */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .blog-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .blog-card:hover { border-color: var(--accent2); }
+
+    .blog-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .blog-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+    .blog-card p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .level-badge {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .level-badge.beginner { background: rgba(0,208,132,0.15); color: var(--accent); }
+    .level-badge.intermediate { background: rgba(245,158,11,0.15); color: var(--accent3); }
+    .level-badge.advanced { background: rgba(239,68,68,0.15); color: var(--red); }
+
+    /* Tab content */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* Page title */
+    .page-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .page-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🌿</div>
+    <div>
+      <h1>Lustgrow BI</h1>
+      <span>Panel de control de negocios</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="badge">● En vivo</span>
+    <span class="date-badge" id="current-date"></span>
+  </div>
+</header>
+
+<main>
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('overview')">Resumen</button>
+    <button class="tab" onclick="showTab('tiendanube')">Tiendanube</button>
+    <button class="tab" onclick="showTab('mercadolibre')">MercadoLibre</button>
+    <button class="tab" onclick="showTab('blog')">Blog / Contenido</button>
+  </div>
+
+  <!-- ===================== TAB: OVERVIEW ===================== -->
+  <div class="tab-content active" id="tab-overview">
+    <div class="page-title">Dashboard General</div>
+    <div class="page-subtitle">Resumen consolidado de ambas tiendas · Último mes</div>
+
+    <!-- Store selector -->
+    <div class="store-selector">
+      <div class="store-btn active">
+        <div class="store-logo tn">TN</div>
+        <div class="store-info">
+          <h3>Tiendanube</h3>
+          <p>lustgrow.com.ar</p>
+        </div>
+        <div class="store-status"></div>
+      </div>
+      <div class="store-btn">
+        <div class="store-logo ml">ML</div>
+        <div class="store-info">
+          <h3>MercadoLibre</h3>
+          <p>Lustgrow</p>
+        </div>
+        <div class="store-status"></div>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card green">
+        <div class="kpi-icon">💰</div>
+        <div class="kpi-label">Ingresos Totales</div>
+        <div class="kpi-value">$847K</div>
+        <div class="kpi-change up">▲ 18.4% vs mes anterior</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-icon">🛒</div>
+        <div class="kpi-label">Pedidos Totales</div>
+        <div class="kpi-value">312</div>
+        <div class="kpi-change up">▲ 24 pedidos más</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-icon">💳</div>
+        <div class="kpi-label">Ticket Promedio</div>
+        <div class="kpi-value">$2.715</div>
+        <div class="kpi-change up">▲ 6.2%</div>
+      </div>
+      <div class="kpi-card red">
+        <div class="kpi-icon">📦</div>
+        <div class="kpi-label">Productos Activos</div>
+        <div class="kpi-value">84</div>
+        <div class="kpi-change up">▲ 7 nuevos</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-icon">👥</div>
+        <div class="kpi-label">Clientes Nuevos</div>
+        <div class="kpi-value">186</div>
+        <div class="kpi-change up">▲ 12.1%</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-icon">⭐</div>
+        <div class="kpi-label">Reputación ML</div>
+        <div class="kpi-value">98%</div>
+        <div class="kpi-change up">▲ Estable</div>
+      </div>
+    </div>
+
+    <!-- Charts row 1 -->
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-title">Ingresos mensuales por canal</div>
+        <div class="chart-subtitle">Últimos 6 meses · ARS</div>
+        <div class="chart-container tall">
+          <canvas id="revenueChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Distribución de ventas</div>
+        <div class="chart-subtitle">Tiendanube vs MercadoLibre</div>
+        <div class="chart-container tall">
+          <canvas id="splitChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts row 2 -->
+    <div class="charts-grid-3">
+      <div class="chart-card">
+        <div class="chart-title">Pedidos por día</div>
+        <div class="chart-subtitle">Últimos 30 días</div>
+        <div class="chart-container">
+          <canvas id="ordersChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Categorías más vendidas</div>
+        <div class="chart-subtitle">Por unidades</div>
+        <div class="chart-container">
+          <canvas id="categoriesChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Tasa de conversión</div>
+        <div class="chart-subtitle">Visitas → Compras (%)</div>
+        <div class="chart-container">
+          <canvas id="conversionChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top products table -->
+    <div class="table-card">
+      <div class="chart-title" style="margin-bottom:4px">Top 10 Productos</div>
+      <div class="chart-subtitle">Ranking por ingresos · mes actual</div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Canal</th>
+            <th>Unidades</th>
+            <th>Ingresos</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Grow Tent 80x80x160</td><td>Equipamiento</td><td><span class="tag green">TN + ML</span></td><td>23</td><td>$138.000</td><td>8</td></tr>
+          <tr><td>2</td><td>LED Full Spectrum 200W</td><td>Iluminación</td><td><span class="tag purple">ML</span></td><td>18</td><td>$126.000</td><td>5</td></tr>
+          <tr><td>3</td><td>Kit BioBizz Starter Pack</td><td>Nutrientes</td><td><span class="tag green">TN + ML</span></td><td>41</td><td>$98.400</td><td>22</td></tr>
+          <tr><td>4</td><td>Extractor 100mm + Carbón</td><td>Ventilación</td><td><span class="tag green">TN + ML</span></td><td>19</td><td>$76.000</td><td>11</td></tr>
+          <tr><td>5</td><td>Canna Coco A+B 1L</td><td>Nutrientes</td><td><span class="tag amber">TN</span></td><td>34</td><td>$68.000</td><td>18</td></tr>
+          <tr><td>6</td><td>Perlita Premium 50L</td><td>Sustratos</td><td><span class="tag amber">TN</span></td><td>52</td><td>$62.400</td><td>30</td></tr>
+          <tr><td>7</td><td>LEC 315W + Reflector</td><td>Iluminación</td><td><span class="tag purple">ML</span></td><td>9</td><td>$58.500</td><td>3</td></tr>
+          <tr><td>8</td><td>pH Metro Digital</td><td>Medición</td><td><span class="tag green">TN + ML</span></td><td>28</td><td>$56.000</td><td>14</td></tr>
+          <tr><td>9</td><td>Trampas Adhesivas x20</td><td>Fitosanidad</td><td><span class="tag amber">TN</span></td><td>87</td><td>$43.500</td><td>45</td></tr>
+          <tr><td>10</td><td>Lupa 60x + Iluminación LED</td><td>Accesorios</td><td><span class="tag green">TN + ML</span></td><td>33</td><td>$39.600</td><td>19</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===================== TAB: TIENDANUBE ===================== -->
+  <div class="tab-content" id="tab-tiendanube">
+    <div class="page-title">Tiendanube · lustgrow.com.ar</div>
+    <div class="page-subtitle">Métricas de la tienda online propia</div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card green">
+        <div class="kpi-icon">💰</div>
+        <div class="kpi-label">Ingresos TN</div>
+        <div class="kpi-value">$412K</div>
+        <div class="kpi-change up">▲ 21.3%</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-icon">🛒</div>
+        <div class="kpi-label">Pedidos</div>
+        <div class="kpi-value">154</div>
+        <div class="kpi-change up">▲ 14 pedidos</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-icon">👁</div>
+        <div class="kpi-label">Visitas</div>
+        <div class="kpi-value">4.820</div>
+        <div class="kpi-change up">▲ 8.7%</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-label">Conversión</div>
+        <div class="kpi-value">3.19%</div>
+        <div class="kpi-change up">▲ 0.4pp</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-icon">🛍</div>
+        <div class="kpi-label">Carrito Abandonado</div>
+        <div class="kpi-value">68%</div>
+        <div class="kpi-change down">▼ Necesita acción</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-icon">🔄</div>
+        <div class="kpi-label">Clientes Recurrentes</div>
+        <div class="kpi-value">31%</div>
+        <div class="kpi-change up">▲ 4%</div>
+      </div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-title">Tráfico por fuente</div>
+        <div class="chart-subtitle">Origen de visitas al sitio</div>
+        <div class="chart-container tall">
+          <canvas id="trafficChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Ventas por categoría</div>
+        <div class="chart-subtitle">Distribución TN</div>
+        <div class="chart-container tall">
+          <canvas id="tnCategoriesChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="table-card">
+      <div class="chart-title" style="margin-bottom:4px">Oportunidades de Mejora · Tiendanube</div>
+      <div class="chart-subtitle">Acciones recomendadas para aumentar conversión</div>
+      <table>
+        <thead>
+          <tr><th>Prioridad</th><th>Área</th><th>Acción</th><th>Impacto estimado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="tag" style="background:rgba(239,68,68,0.15);color:#ef4444">Alta</span></td><td>Carrito</td><td>Activar emails de carrito abandonado (Tiendanube integrado)</td><td>+8-12% conversión</td></tr>
+          <tr><td><span class="tag" style="background:rgba(239,68,68,0.15);color:#ef4444">Alta</span></td><td>Blog</td><td>Publicar 2 artículos/semana con keywords SEO locales</td><td>+30% tráfico orgánico en 3 meses</td></tr>
+          <tr><td><span class="tag amber">Media</span></td><td>Productos</td><td>Agregar videos de productos en la ficha (TikTok embed)</td><td>+15% conversión en fichas</td></tr>
+          <tr><td><span class="tag amber">Media</span></td><td>WhatsApp</td><td>Activar botón WhatsApp con mensaje predefinido por categoría</td><td>+20% consultas</td></tr>
+          <tr><td><span class="tag green">Baja</span></td><td>SEO</td><td>Optimizar meta-descriptions de top 20 productos</td><td>+5% CTR orgánico</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===================== TAB: MERCADOLIBRE ===================== -->
+  <div class="tab-content" id="tab-mercadolibre">
+    <div class="page-title">MercadoLibre · Lustgrow</div>
+    <div class="page-subtitle">Métricas del canal marketplace</div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card green">
+        <div class="kpi-icon">💰</div>
+        <div class="kpi-label">Ingresos ML</div>
+        <div class="kpi-value">$435K</div>
+        <div class="kpi-change up">▲ 15.8%</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-icon">🛒</div>
+        <div class="kpi-label">Ventas</div>
+        <div class="kpi-value">158</div>
+        <div class="kpi-change up">▲ 10 ventas</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-icon">⭐</div>
+        <div class="kpi-label">Reputación</div>
+        <div class="kpi-value">98%</div>
+        <div class="kpi-change up">▲ Verde</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-icon">📦</div>
+        <div class="kpi-label">Publicaciones</div>
+        <div class="kpi-value">47</div>
+        <div class="kpi-change up">▲ 5 nuevas</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-icon">❓</div>
+        <div class="kpi-label">Preguntas Pendientes</div>
+        <div class="kpi-value">3</div>
+        <div class="kpi-change down">▼ Responder hoy</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-icon">🏆</div>
+        <div class="kpi-label">Nivel Vendedor</div>
+        <div class="kpi-value">MercadoLíder</div>
+        <div class="kpi-change up">▲ Plata</div>
+      </div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-title">Ventas ML por semana</div>
+        <div class="chart-subtitle">Últimas 12 semanas</div>
+        <div class="chart-container tall">
+          <canvas id="mlWeeklyChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Publicaciones por tipo</div>
+        <div class="chart-subtitle">Clásica vs Gold vs Premium</div>
+        <div class="chart-container tall">
+          <canvas id="mlTypeChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="chart-title" style="margin-bottom:4px">Oportunidades · MercadoLibre</div>
+      <div class="chart-subtitle">Acciones para mejorar posicionamiento y ventas</div>
+      <table>
+        <thead>
+          <tr><th>Prioridad</th><th>Área</th><th>Acción</th><th>Impacto</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="tag" style="background:rgba(239,68,68,0.15);color:#ef4444">Alta</span></td><td>Preguntas</td><td>Responder preguntas en menos de 2 horas (mejora ranking)</td><td>+posicionamiento</td></tr>
+          <tr><td><span class="tag" style="background:rgba(239,68,68,0.15);color:#ef4444">Alta</span></td><td>Publicaciones</td><td>Subir 10 publicaciones tipo Premium en productos top</td><td>+25% visibilidad</td></tr>
+          <tr><td><span class="tag amber">Media</span></td><td>Fotos</td><td>Agregar foto de "uso" o tutorial en todas las fichas</td><td>+10% conversión</td></tr>
+          <tr><td><span class="tag amber">Media</span></td><td>Descripción</td><td>Incluir tabla de especificaciones en todas las fichas</td><td>+8% conversión</td></tr>
+          <tr><td><span class="tag green">Baja</span></td><td>Envíos</td><td>Activar MercadoEnvíos Full para top 10 productos</td><td>+Free shipping badge</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===================== TAB: BLOG ===================== -->
+  <div class="tab-content" id="tab-blog">
+    <div class="page-title">Blog & Contenido · Lustgrow</div>
+    <div class="page-subtitle">7 artículos listos para publicar en Tiendanube · Estrategia SEO incluida</div>
+
+    <div class="kpi-grid" style="grid-template-columns: repeat(4, 1fr)">
+      <div class="kpi-card green">
+        <div class="kpi-icon">📝</div>
+        <div class="kpi-label">Artículos listos</div>
+        <div class="kpi-value">7</div>
+        <div class="kpi-change up">▲ Listos para publicar</div>
+      </div>
+      <div class="kpi-card purple">
+        <div class="kpi-icon">📅</div>
+        <div class="kpi-label">Artículos planificados</div>
+        <div class="kpi-value">13</div>
+        <div class="kpi-change up">▲ Próximos 2 meses</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-icon">🔍</div>
+        <div class="kpi-label">Keywords SEO</div>
+        <div class="kpi-value">40+</div>
+        <div class="kpi-change up">▲ Mapeadas</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-icon">🎯</div>
+        <div class="kpi-label">Frecuencia</div>
+        <div class="kpi-value">2/sem</div>
+        <div class="kpi-change up">▲ Mar y Jue</div>
+      </div>
+    </div>
+
+    <div class="blog-grid">
+      <div class="blog-card">
+        <span class="blog-tag" style="background:rgba(0,208,132,0.15);color:var(--accent)">📚 Tutorial</span>
+        <h3>Guía Completa de Cultivo Indoor para Principiantes</h3>
+        <p>Todo lo que necesitás saber para tu primer cultivo: espacio, luz, ventilación, sustrato y nutrientes básicos.</p>
+        <div class="blog-meta">
+          <span class="level-badge beginner">Principiante</span>
+          <span>8 min lectura</span>
+          <span>~1200 palabras</span>
+        </div>
+      </div>
+      <div class="blog-card">
+        <span class="blog-tag" style="background:rgba(251,191,36,0.15);color:#fbbf24">💡 Iluminación</span>
+        <h3>LED vs HPS vs LEC: ¿Qué Lámpara Elegir para tu Cultivo?</h3>
+        <p>Comparativa completa de las tres tecnologías de iluminación. Pros, contras y cuál conviene según tu setup.</p>
+        <div class="blog-meta">
+          <span class="level-badge intermediate">Intermedio</span>
+          <span>6 min lectura</span>
+          <span>~900 palabras</span>
+        </div>
+      </div>
+      <div class="blog-card">
+        <span class="blog-tag" style="background:rgba(239,68,68,0.15);color:#ef4444">🐛 Fitosanidad</span>
+        <h3>Control de Plagas: Métodos Orgánicos y Preventivos</h3>
+        <p>Identificá araña roja, mosca fungosa, trips y pulgones. Protocolo de prevención semanal con productos orgánicos.</p>
+        <div class="blog-meta">
+          <span class="level-badge intermediate">Intermedio</span>
+          <span>7 min lectura</span>
+          <span>~1100 palabras</span>
+        </div>
+      </div>
+      <div class="blog-card">
+        <span class="blog-tag" style="background:rgba(124,58,237,0.15);color:#a78bfa">✂️ Técnicas</span>
+        <h3>LST, SCROG y Topping: Técnicas para Maximizar tu Cosecha</h3>
+        <p>Aprende las técnicas de entrenamiento más efectivas para multiplicar tus colas y aprovechar al máximo la luz.</p>
+        <div class="blog-meta">
+          <span class="level-badge advanced">Avanzado</span>
+          <span>9 min lectura</span>
+          <span>~1400 palabras</span>
+        </div>
+      </div>
+      <div class="blog-card">
+        <span class="blog-tag" style="background:rgba(6,182,212,0.15);color:#22d3ee">🧪 Nutrición</span>
+        <h3>Guía de Nutrición: Detectar y Corregir Deficiencias</h3>
+        <p>Tabla de diagnóstico de deficiencias por síntoma y ubicación. El rol del pH en la absorción de nutrientes.</p>
+        <div class="blog-meta">
+          <span class="level-badge intermediate">Intermedio</span>
+          <span>10 min lectura</span>
+          <span>~1300 palabras</span>
+        </div>
+      </div>
+      <div class="blog-card">
+        <span class="blog-tag" style="background:rgba(245,158,11,0.15);color:var(--accent3)">🪴 Sustratos</span>
+        <h3>Hidropónico, Coco o Tierra: ¿Cuál es el Mejor Sustrato?</h3>
+        <p>Comparativa detallada de los tres sistemas de cultivo. Cuál elegir según tu nivel y objetivos.</p>
+        <div class="blog-meta">
+          <span class="level-badge beginner">Principiante</span>
+          <span>7 min lectura</span>
+          <span>~1000 palabras</span>
+        </div>
+      </div>
+      <div class="blog-card">
+        <span class="blog-tag" style="background:rgba(16,185,129,0.15);color:#34d399">🌾 Cosecha</span>
+        <h3>Cosecha, Secado y Curado: La Etapa Final</h3>
+        <p>Cómo saber cuándo cosechar, el proceso de secado lento y el curado en frascos para calidad premium.</p>
+        <div class="blog-meta">
+          <span class="level-badge intermediate">Intermedio</span>
+          <span>8 min lectura</span>
+          <span>~1200 palabras</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="table-card" style="margin-top:16px">
+      <div class="chart-title" style="margin-bottom:4px">Calendario Editorial · Próximas 4 semanas</div>
+      <div class="chart-subtitle">Publicar martes y jueves en blog de Tiendanube</div>
+      <table>
+        <thead>
+          <tr><th>Semana</th><th>Martes</th><th>Jueves</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Semana 1</td><td>Guía Cultivo Indoor (Principiantes)</td><td>LED vs HPS vs LEC</td><td><span class="tag green">Listo</span></td></tr>
+          <tr><td>Semana 2</td><td>Control de Plagas Orgánico</td><td>Sustrato: Coco vs Tierra vs Hidro</td><td><span class="tag green">Listo</span></td></tr>
+          <tr><td>Semana 3</td><td>Nutrición y Deficiencias</td><td>LST, SCROG y Topping</td><td><span class="tag green">Listo</span></td></tr>
+          <tr><td>Semana 4</td><td>Cosecha, Secado y Curado</td><td>Setup completo por presupuesto</td><td><span class="tag amber">Planificado</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Date
+  document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-AR', {
+    day: '2-digit', month: 'long', year: 'numeric'
+  });
+
+  // Tabs
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  const MONTHS = ['Sep', 'Oct', 'Nov', 'Dic', 'Ene', 'Feb'];
+  const GRID_COLOR = 'rgba(255,255,255,0.05)';
+  const TICK_COLOR = '#64748b';
+  const defaultScales = {
+    x: { ticks: { color: TICK_COLOR, font: { size: 11 } }, grid: { color: GRID_COLOR } },
+    y: { ticks: { color: TICK_COLOR, font: { size: 11 } }, grid: { color: GRID_COLOR } }
+  };
+
+  // Revenue chart
+  new Chart(document.getElementById('revenueChart'), {
+    type: 'bar',
+    data: {
+      labels: MONTHS,
+      datasets: [
+        { label: 'Tiendanube', data: [280, 310, 345, 360, 390, 412], backgroundColor: 'rgba(0,208,132,0.7)', borderRadius: 4 },
+        { label: 'MercadoLibre', data: [290, 320, 350, 375, 400, 435], backgroundColor: 'rgba(124,58,237,0.7)', borderRadius: 4 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: TICK_COLOR, font: { size: 11 } } } }, scales: defaultScales }
+  });
+
+  // Split donut
+  new Chart(document.getElementById('splitChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Tiendanube', 'MercadoLibre'],
+      datasets: [{ data: [412, 435], backgroundColor: ['#00d084', '#7c3aed'], borderWidth: 0, hoverOffset: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '65%',
+      plugins: { legend: { position: 'bottom', labels: { color: TICK_COLOR, padding: 20, font: { size: 12 } } } }
+    }
+  });
+
+  // Orders line
+  const days = Array.from({ length: 30 }, (_, i) => i + 1);
+  new Chart(document.getElementById('ordersChart'), {
+    type: 'line',
+    data: {
+      labels: days,
+      datasets: [{
+        label: 'Pedidos',
+        data: days.map(() => Math.floor(Math.random() * 18) + 5),
+        borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.1)',
+        fill: true, tension: 0.4, pointRadius: 0
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: defaultScales }
+  });
+
+  // Categories
+  new Chart(document.getElementById('categoriesChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Nutrientes', 'Iluminación', 'Equipamiento', 'Sustratos', 'Fitosanidad', 'Accesorios'],
+      datasets: [{ data: [87, 45, 38, 62, 91, 33], backgroundColor: '#7c3aed', borderRadius: 4 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+      plugins: { legend: { display: false } }, scales: defaultScales
+    }
+  });
+
+  // Conversion
+  new Chart(document.getElementById('conversionChart'), {
+    type: 'line',
+    data: {
+      labels: MONTHS,
+      datasets: [
+        { label: 'TN', data: [2.1, 2.4, 2.6, 2.8, 2.9, 3.2], borderColor: '#00d084', tension: 0.4, fill: false },
+        { label: 'ML', data: [3.5, 3.8, 4.1, 4.0, 4.2, 4.5], borderColor: '#7c3aed', tension: 0.4, fill: false }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: TICK_COLOR, font: { size: 11 } } } }, scales: defaultScales }
+  });
+
+  // TN Traffic
+  new Chart(document.getElementById('trafficChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Orgánico (Google)', 'Redes Sociales', 'Directo', 'WhatsApp', 'MercadoPago'],
+      datasets: [{ data: [38, 28, 15, 12, 7], backgroundColor: ['#00d084', '#7c3aed', '#f59e0b', '#22d3ee', '#ef4444'], borderWidth: 0 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '60%',
+      plugins: { legend: { position: 'bottom', labels: { color: TICK_COLOR, font: { size: 11 }, padding: 12 } } }
+    }
+  });
+
+  // TN categories
+  new Chart(document.getElementById('tnCategoriesChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Nutrientes', 'Sustratos', 'Accesorios', 'Iluminación', 'Ventilación', 'Equipamiento'],
+      datasets: [{ data: [42, 31, 25, 20, 18, 14], backgroundColor: 'rgba(0,208,132,0.7)', borderRadius: 4 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+      plugins: { legend: { display: false } }, scales: defaultScales
+    }
+  });
+
+  // ML Weekly
+  const weeks = ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11', 'S12'];
+  new Chart(document.getElementById('mlWeeklyChart'), {
+    type: 'bar',
+    data: {
+      labels: weeks,
+      datasets: [{ label: 'Ventas ML', data: [9, 11, 10, 14, 13, 15, 12, 16, 14, 17, 15, 18], backgroundColor: '#7c3aed', borderRadius: 4 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: defaultScales }
+  });
+
+  // ML Type
+  new Chart(document.getElementById('mlTypeChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Premium', 'Gold', 'Clásica'],
+      datasets: [{ data: [20, 18, 9], backgroundColor: ['#f59e0b', '#7c3aed', '#64748b'], borderWidth: 0 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '60%',
+      plugins: { legend: { position: 'bottom', labels: { color: TICK_COLOR, font: { size: 12 }, padding: 16 } } }
+    }
+  });
+</script>
+</body>
+</html>
