@@ -17,7 +17,7 @@ El punto de partida natural para la mayoría de los cultivadores.
 ### Características
 - **Buffer natural:** la tierra tiene microorganismos que regulan el pH y protegen las raíces
 - **Perdonadora:** tolera mejor los errores de principiante en nutrición y riego
-- **Nutrientes pre-cargados:** los sustratos premium (tipo BioBizz, Plagron) vienen con nutrientes para las primeras semanas
+- **Nutrientes pre-cargados:** los sustratos premium (tipo [BioBizz](https://www.lustgrow.com.ar/buscar?q=biobizz), [Plagron](https://www.lustgrow.com.ar/buscar?q=plagron)) vienen con nutrientes para las primeras semanas
 
 ### Tipos de tierra para cultivo
 | Tipo | Nutrientes | Adecuado para |
@@ -27,9 +27,12 @@ El punto de partida natural para la mayoría de los cultivadores.
 | Premium con perlita | Altos | Cultivo completo |
 
 ### Relación de mezcla recomendada
-- **70% tierra** + **30% perlita**: drenaje y oxigenación perfectos
+- **70% tierra** + **30% [perlita](https://www.lustgrow.com.ar/buscar?q=perlita)**: drenaje y oxigenación perfectos
 
 ### pH de riego en tierra: **6.0 - 7.0**
+
+> 🛒 **[Ver sustratos y tierras de cultivo →](https://www.lustgrow.com.ar/buscar?q=sustrato+tierra)**
+> 🛒 **[Ver perlita →](https://www.lustgrow.com.ar/buscar?q=perlita)**
 
 ---
 
@@ -45,14 +48,17 @@ El término medio entre tierra e hidropónico. Muy popular entre cultivadores in
 
 ### ¿Con qué nutrientes trabajar en coco?
 Necesitás nutrientes específicos para coco, que incluyen calcio y magnesio en mayor proporción.
-- **Canna Coco** (referente mundial)
-- **Plagron Coco**
-- **General Hydroponics** (adaptado)
+- **[Canna Coco](https://www.lustgrow.com.ar/buscar?q=canna+coco)** (referente mundial)
+- **[Plagron Coco](https://www.lustgrow.com.ar/buscar?q=plagron+coco)**
+- **[General Hydroponics](https://www.lustgrow.com.ar/buscar?q=general+hydroponics)** (adaptado)
 
 ### Frecuencia de riego en coco
 El coco ideal siempre está húmedo pero nunca encharcado. En etapas avanzadas podés regar 2-3 veces por día con sistemas de goteo.
 
 ### pH de riego en coco: **5.8 - 6.3**
+
+> 🛒 **[Ver coco coir y sustratos de fibra →](https://www.lustgrow.com.ar/buscar?q=coco+coir)**
+> 🛒 **[Ver nutrientes específicos para coco →](https://www.lustgrow.com.ar/buscar?q=canna+coco)**
 
 ---
 
@@ -61,9 +67,9 @@ El coco ideal siempre está húmedo pero nunca encharcado. En etapas avanzadas p
 Sin sustrato sólido. Las raíces crecen directamente en solución nutritiva.
 
 ### Sistemas más populares
-- **DWC (Deep Water Culture):** raíces suspendidas en solución nutritiva oxigenada
-- **NFT (Nutrient Film Technique):** película fina de solución nutritiva circulando por canales
-- **Ebb & Flow:** inundación y drenaje periódicos
+- **[DWC (Deep Water Culture)](https://www.lustgrow.com.ar/buscar?q=dwc):** raíces suspendidas en solución nutritiva oxigenada
+- **[NFT (Nutrient Film Technique)](https://www.lustgrow.com.ar/buscar?q=nft):** película fina de solución nutritiva circulando por canales
+- **[Ebb & Flow](https://www.lustgrow.com.ar/buscar?q=ebb+flow):** inundación y drenaje periódicos
 
 ### Ventajas del hidropónico
 - **Crecimiento 30-50% más rápido** que tierra
@@ -76,6 +82,8 @@ Sin sustrato sólido. Las raíces crecen directamente en solución nutritiva.
 - Requiere inversión inicial en sistema e instrumentos
 
 ### pH en hidropónico: **5.5 - 6.5**
+
+> 🛒 **[Ver sistemas hidropónicos completos →](https://www.lustgrow.com.ar/buscar?q=hidroponico)**
 
 ---
 
@@ -92,11 +100,15 @@ Sin sustrato sólido. Las raíces crecen directamente en solución nutritiva.
 
 ---
 
-## Nuestra recomendación
+## 🛒 Nuestra recomendación — Conseguilo en Lustgrow
 
-- **Primer cultivo:** Tierra BioBizz All Mix + 20% perlita
-- **Cultivador intermedio:** Coco Cair Premium + Canna Coco
-- **Cultivador avanzado:** Sistema DWC o NFT con General Hydroponics
+| Setup | Productos | Link |
+|-------|---------|------|
+| **Primer cultivo** | Tierra BioBizz All Mix + 20% perlita | [Ver →](https://www.lustgrow.com.ar/buscar?q=biobizz+all+mix) |
+| **Cultivador intermedio** | Coco Coir Premium + Canna Coco | [Ver →](https://www.lustgrow.com.ar/buscar?q=coco+coir) |
+| **Cultivador avanzado** | Sistema DWC o NFT con General Hydroponics | [Ver →](https://www.lustgrow.com.ar/buscar?q=dwc) |
+| Perlita | Para mezclar con tierra | [Ver →](https://www.lustgrow.com.ar/buscar?q=perlita) |
+| Medidor de pH | Imprescindible en cualquier sistema | [Ver →](https://www.lustgrow.com.ar/buscar?q=medidor+ph) |
 
 ---
 

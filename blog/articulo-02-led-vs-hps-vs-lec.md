@@ -27,6 +27,8 @@ La tecnología clásica del cultivo indoor. Muy extendida y probada.
 
 **Ideal para:** cultivos grandes con buena ventilación o ambientes frescos.
 
+> 🛒 **[Ver lámparas HPS disponibles →](https://www.lustgrow.com.ar/buscar?q=hps)**
+
 ---
 
 ## LEC / CMH (Luz de Cerámica Metálica)
@@ -44,6 +46,8 @@ La evolución del HPS. Espectro más completo, mejor calidad de flores.
 - Las bombillas de repuesto son caras
 
 **Ideal para:** cultivadores que priorizan calidad sobre cantidad.
+
+> 🛒 **[Ver lámparas LEC/CMH disponibles →](https://www.lustgrow.com.ar/buscar?q=lec)**
 
 ---
 
@@ -65,6 +69,8 @@ La tecnología del futuro, ya disponible hoy a precios accesibles.
 
 **Ideal para:** todos los cultivadores, especialmente en espacios pequeños y medianos.
 
+> 🛒 **[Ver lámparas LED Full Spectrum disponibles →](https://www.lustgrow.com.ar/buscar?q=led+full+spectrum)**
+
 ---
 
 ## Tabla comparativa rápida
@@ -82,9 +88,21 @@ La tecnología del futuro, ya disponible hoy a precios accesibles.
 
 ## Nuestra recomendación en Lustgrow
 
-Para espacios de hasta 1.2m x 1.2m: **LED Full Spectrum de 200-300W real**
-Para espacios de 1.2m x 1.2m a 2.4m x 1.2m: **LEC 315W** o **LED de 400-600W real**
-Para cultivos grandes: **HPS 600W o 1000W** con buena ventilación
+Para espacios de hasta 1.2m x 1.2m: **[LED Full Spectrum de 200-300W real](https://www.lustgrow.com.ar/buscar?q=led+full+spectrum)**
+Para espacios de 1.2m x 1.2m a 2.4m x 1.2m: **[LEC 315W](https://www.lustgrow.com.ar/buscar?q=lec+315)** o **[LED de 400-600W real](https://www.lustgrow.com.ar/buscar?q=led+600w)**
+Para cultivos grandes: **[HPS 600W o 1000W](https://www.lustgrow.com.ar/buscar?q=hps+600w)** con buena ventilación
+
+---
+
+## 🛒 Toda la iluminación para cultivo indoor
+
+| Tecnología | Link |
+|-----------|------|
+| Lámparas LED Full Spectrum | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=led+full+spectrum) |
+| Lámparas LEC / CMH | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=lec) |
+| Lámparas HPS | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=hps) |
+| Balastos y accesorios | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=balasto) |
+| Reflectores | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=reflector) |
 
 ---
 

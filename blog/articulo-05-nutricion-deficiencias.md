@@ -23,6 +23,8 @@ Las plantas necesitan 3 macronutrientes principales (N-P-K) y varios secundarios
 - **Deficiencia:** Bordes de hojas amarillos/marrones que se queman
 - **Exceso:** Quemaduras en puntas, bloqueo de otros nutrientes
 
+> 🛒 **[Ver nutrientes N-P-K para todas las fases →](https://www.lustgrow.com.ar/buscar?q=nutrientes)**
+
 ---
 
 ## Micronutrientes: los más olvidados
@@ -32,7 +34,7 @@ Las plantas necesitan 3 macronutrientes principales (N-P-K) y varios secundarios
 
 **Causa frecuente:** pH incorrecto o agua muy blanda (sin minerales)
 
-**Corrección:** Cal dolomita, calcio-magnesio líquido, o agua del grifo (en zonas con agua dura)
+**Corrección:** Cal dolomita, [calcio-magnesio líquido](https://www.lustgrow.com.ar/buscar?q=calcio+magnesio), o agua del grifo (en zonas con agua dura)
 
 ---
 
@@ -41,7 +43,7 @@ Las plantas necesitan 3 macronutrientes principales (N-P-K) y varios secundarios
 
 **Causa frecuente:** pH fuera de rango, deficiencia real en el sustrato
 
-**Corrección:** Sulfato de magnesio (sal de Epsom) 1g/litro foliar, o calcio-magnesio
+**Corrección:** Sulfato de magnesio (sal de Epsom) 1g/litro foliar, o [calcio-magnesio](https://www.lustgrow.com.ar/buscar?q=calcio+magnesio)
 
 ---
 
@@ -50,7 +52,7 @@ Las plantas necesitan 3 macronutrientes principales (N-P-K) y varios secundarios
 
 **Causa frecuente:** pH alto (>7.0), exceso de calcio o zinc
 
-**Corrección:** Bajar el pH, quelatos de hierro foliar
+**Corrección:** Bajar el pH, [quelatos de hierro foliar](https://www.lustgrow.com.ar/buscar?q=quelato+hierro)
 
 ---
 
@@ -67,6 +69,8 @@ Un pH fuera de rango no destruye los nutrientes, pero los hace **inaccesibles** 
 | Hidropónico | 5.5 - 6.5 |
 
 **Regla de oro:** Si ves deficiencias, lo primero que hacés es medir el pH del agua de riego y del sustrato.
+
+> 🛒 **[Ver medidores de pH y EC →](https://www.lustgrow.com.ar/buscar?q=medidor+ph)**
 
 ---
 
@@ -95,12 +99,16 @@ Cuando hay acumulación de sales o sobrenutrición:
 
 ---
 
-## Marcas disponibles en Lustgrow
+## 🛒 Marcas disponibles en Lustgrow
 
-- **BioBizz:** línea orgánica completa (Bio-Grow, Bio-Bloom, Top-Max)
-- **Plagron:** línea mineral premium
-- **Canna:** referente mundial en nutrientes para coco e hidro
-- **General Hydroponics:** Flora Series para hidropónico
+| Marca | Línea | Link |
+|-------|-------|------|
+| **BioBizz** | Orgánica completa (Bio-Grow, Bio-Bloom, Top-Max) | [Ver productos →](https://www.lustgrow.com.ar/buscar?q=biobizz) |
+| **Plagron** | Mineral premium | [Ver productos →](https://www.lustgrow.com.ar/buscar?q=plagron) |
+| **Canna** | Referente mundial en coco e hidro | [Ver productos →](https://www.lustgrow.com.ar/buscar?q=canna) |
+| **General Hydroponics** | Flora Series para hidropónico | [Ver productos →](https://www.lustgrow.com.ar/buscar?q=general+hydroponics) |
+| Calcio-Magnesio | Corrector de deficiencias Ca/Mg | [Ver productos →](https://www.lustgrow.com.ar/buscar?q=calcio+magnesio) |
+| Medidor de pH | Control de riego | [Ver productos →](https://www.lustgrow.com.ar/buscar?q=medidor+ph) |
 
 ---
 

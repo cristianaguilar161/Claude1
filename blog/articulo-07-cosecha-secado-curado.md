@@ -10,7 +10,7 @@ Cosechar en el momento correcto es crucial. Demasiado pronto = menos producción
 
 ### El método de la lupa (el más preciso)
 
-Observá los tricomas con lupa de 60-100x o microscopio:
+Observá los tricomas con [lupa de 60-100x o microscopio](https://www.lustgrow.com.ar/buscar?q=lupa):
 
 | Color de tricomas | Momento |
 |------------------|---------|
@@ -18,6 +18,8 @@ Observá los tricomas con lupa de 60-100x o microscopio:
 | Blancos/lechosos | Cerca, efecto más activo/energético |
 | Ámbar (30-50%) | Momento ideal para la mayoría |
 | Ámbar (70%+) | Tarde, efecto más sedante/body |
+
+> 🛒 **[Ver lupas y microscopios para tricomas →](https://www.lustgrow.com.ar/buscar?q=lupa)**
 
 ### El método de los pistilos (aproximado)
 
@@ -43,9 +45,11 @@ Eliminá las hojas grandes 5-7 días antes de cosechar para mejorar la circulaci
 2. **Por ramas:** cosechás por partes según madurez de cada zona
 
 ### Proceso
-1. Cortá la planta o rama
+1. Cortá la planta o rama con [tijeras de cosecha](https://www.lustgrow.com.ar/buscar?q=tijera+cosecha)
 2. Eliminá las hojas grandes inmediatamente (manicura húmeda) o dejá para después (manicura seca)
 3. Colgá o colocá en secadero
+
+> 🛒 **[Ver tijeras de cosecha y poda →](https://www.lustgrow.com.ar/buscar?q=tijera)**
 
 ---
 
@@ -73,6 +77,8 @@ Un mal secado arruina meses de trabajo. El objetivo es secar lentamente para pre
 - Secado con luz = degradación de cannabinoides
 - Humedad muy alta (>65%) = riesgo de Botrytis (moho gris)
 
+> 🛒 **[Ver higrómetros para controlar el secado →](https://www.lustgrow.com.ar/buscar?q=higrometro)**
+
 ---
 
 ## El curado: donde nace la calidad premium
@@ -82,7 +88,7 @@ El curado es el proceso de maduración en frascos herméticos. Transforma un pro
 ### Proceso de curado
 
 **Semana 1-2:**
-- Colocá los cogollos en frascos de vidrio herméticos (mason jars)
+- Colocá los cogollos en [frascos de vidrio herméticos (mason jars)](https://www.lustgrow.com.ar/buscar?q=frasco+hermetico)
 - Llenalo al 70% sin compactar
 - Abrí los frascos 2 veces al día por 15 minutos (**burping**) para eliminar humedad
 
@@ -94,9 +100,11 @@ El curado es el proceso de maduración en frascos herméticos. Transforma un pro
 - El curado largo (2-4 meses) mejora significativamente el sabor y suavidad
 
 ### Herramientas para el curado
-- **Higrómetros digitales** dentro de cada frasco (mantener 58-65% HR)
-- **Boveda 62%** para regular la humedad automáticamente
-- **Frascos de vidrio herméticos** con cierre hermético
+- **[Higrómetros digitales](https://www.lustgrow.com.ar/buscar?q=higrometro)** dentro de cada frasco (mantener 58-65% HR)
+- **[Boveda 62%](https://www.lustgrow.com.ar/buscar?q=boveda)** para regular la humedad automáticamente
+- **[Frascos de vidrio herméticos](https://www.lustgrow.com.ar/buscar?q=frasco+hermetico)** con cierre hermético
+
+> 🛒 **[Ver todo para el curado →](https://www.lustgrow.com.ar/buscar?q=boveda)**
 
 ---
 
@@ -107,16 +115,28 @@ El curado es el proceso de maduración en frascos herméticos. Transforma un pro
 | Olor a amoniaco | Demasiada humedad, bacteria | Sacá los cogollos, secá más |
 | HR >70% en frasco | Cogollos no estaban secos | Secado adicional |
 | Moho visible | HR alta + temperatura | Descartá lo afectado, secá el resto |
-| HR <55% | Demasiado seco | Agregá Boveda o piel de naranja por 1 hora |
+| HR <55% | Demasiado seco | Agregá [Boveda](https://www.lustgrow.com.ar/buscar?q=boveda) o piel de naranja por 1 hora |
 
 ---
 
 ## Almacenamiento a largo plazo
 
-- **Frascos de vidrio oscuros** o guardados en lugar oscuro
+- **[Frascos de vidrio oscuros](https://www.lustgrow.com.ar/buscar?q=frasco+hermetico)** o guardados en lugar oscuro
 - **Temperatura:** 15-20°C
 - **Sin luz UV:** destruye los cannabinoides
 - Correctamente curado y almacenado, el producto se conserva 1-2 años sin degradación significativa
+
+---
+
+## 🛒 Kit completo de cosecha y curado — Conseguilo en Lustgrow
+
+| Producto | Link |
+|---------|------|
+| Lupa / Microscopio para tricomas | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=lupa) |
+| Tijeras de cosecha | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=tijera) |
+| Higrómetro digital | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=higrometro) |
+| Boveda 62% (regulador de humedad) | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=boveda) |
+| Frascos herméticos para curado | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=frasco+hermetico) |
 
 ---
 

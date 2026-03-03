@@ -20,21 +20,27 @@ El cultivo indoor te da control total sobre el ambiente de tus plantas. A difere
 ### 1. Espacio de cultivo
 Para un primer cultivo, un grow tent de **60x60x140 cm** es suficiente para 1-2 plantas.
 
+> 🛒 **[Ver carpas de cultivo (grow tents) →](https://www.lustgrow.com.ar/buscar?q=grow+tent)**
+
 ### 2. Iluminación
-- **LED Full Spectrum:** la mejor opción hoy. Bajo consumo, poco calor, excelente producción.
-- **LEC/CMH:** ideal para calidades premium.
+- **[LED Full Spectrum](https://www.lustgrow.com.ar/buscar?q=led+full+spectrum):** la mejor opción hoy. Bajo consumo, poco calor, excelente producción.
+- **[LEC/CMH](https://www.lustgrow.com.ar/buscar?q=lec):** ideal para calidades premium.
 - Para un espacio de 60x60 cm: una lámpara de **100-150W** LED real es suficiente.
 
+> 🛒 **[Ver toda la iluminación para cultivo →](https://www.lustgrow.com.ar/buscar?q=lampara+cultivo)**
+
 ### 3. Ventilación
-- **Extractor + carbón activado:** para control de olores y renovación de aire.
-- **Ventilador oscilante:** fortalece los tallos y distribuye el CO₂.
+- **[Extractor + carbón activado](https://www.lustgrow.com.ar/buscar?q=extractor):** para control de olores y renovación de aire.
+- **[Ventilador oscilante](https://www.lustgrow.com.ar/buscar?q=ventilador):** fortalece los tallos y distribuye el CO₂.
 
 ### 4. Sustrato
-Para principiantes, recomendamos mezcla 70% tierra + 30% perlita. La perlita mejora el drenaje y oxigenación de raíces.
+Para principiantes, recomendamos mezcla 70% [tierra](https://www.lustgrow.com.ar/buscar?q=sustrato+tierra) + 30% [perlita](https://www.lustgrow.com.ar/buscar?q=perlita). La perlita mejora el drenaje y oxigenación de raíces.
 
 ### 5. Nutrientes
 - **Fase vegetativa:** Nitrógeno alto (N-P-K: 3-1-2)
 - **Fase de floración:** Fósforo y Potasio alto (N-P-K: 1-3-2)
+
+> 🛒 **[Ver nutrientes para todas las fases →](https://www.lustgrow.com.ar/buscar?q=nutrientes)**
 
 ---
 
@@ -53,7 +59,7 @@ Para principiantes, recomendamos mezcla 70% tierra + 30% perlita. La perlita mej
 ## Errores más comunes
 
 1. **Regar de más:** es la causa #1 de problemas. Esperá que el sustrato esté seco en los primeros 2-3 cm.
-2. **pH incorrecto:** mantenelo entre 6.0 y 7.0 en tierra. Errores de pH bloquean nutrientes.
+2. **pH incorrecto:** mantenelo entre 6.0 y 7.0 en tierra. Errores de pH bloquean nutrientes. → [Ver medidores de pH](https://www.lustgrow.com.ar/buscar?q=medidor+ph)
 3. **Temperatura extrema:** más de 30°C estresa las plantas. Menos de 18°C frena el crecimiento.
 4. **Sobrenutrición:** empezá con la mitad de la dosis recomendada por el fabricante.
 
@@ -66,6 +72,21 @@ Para principiantes, recomendamos mezcla 70% tierra + 30% perlita. La perlita mej
 - [ ] Revisar hojas buscando plagas o deficiencias
 - [ ] Registrar el progreso con fotos
 - [ ] Ajustar altura de la lámpara según el crecimiento
+
+---
+
+## 🛒 Kit completo para empezar — Conseguilo en Lustgrow
+
+| Producto | Link |
+|---------|------|
+| Grow Tent / Carpa de cultivo | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=grow+tent) |
+| Lámpara LED Full Spectrum | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=led+full+spectrum) |
+| Extractor + filtro de carbón | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=extractor) |
+| Ventilador oscilante | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=ventilador) |
+| Sustrato / tierra de cultivo | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=sustrato+tierra) |
+| Perlita | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=perlita) |
+| Nutrientes base | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=nutrientes) |
+| Medidor de pH | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=medidor+ph) |
 
 ---
 

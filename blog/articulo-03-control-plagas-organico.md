@@ -18,8 +18,8 @@ Las plagas son uno de los mayores problemas del cultivo indoor. La buena noticia
 **Condiciones que la favorecen:** Calor excesivo (>28°C) y humedad baja (<40%)
 
 **Tratamiento orgánico:**
-- Aceite de Neem (1-2ml/litro) cada 5 días, 3 aplicaciones
-- Jabón potásico (2-3ml/litro) en el envés
+- [Aceite de Neem](https://www.lustgrow.com.ar/buscar?q=aceite+neem) (1-2ml/litro) cada 5 días, 3 aplicaciones
+- [Jabón potásico](https://www.lustgrow.com.ar/buscar?q=jabon+potasico) (2-3ml/litro) en el envés
 - Predadores naturales: *Phytoseiulus persimilis*
 
 ---
@@ -31,8 +31,8 @@ Las plagas son uno de los mayores problemas del cultivo indoor. La buena noticia
 
 **Tratamiento:**
 - Dejar secar bien la superficie entre riegos
-- Trampas adhesivas amarillas
-- *Bacillus thuringiensis var. israelensis* aplicado al riego
+- [Trampas adhesivas amarillas](https://www.lustgrow.com.ar/buscar?q=trampa+adhesiva)
+- [*Bacillus thuringiensis* var. israelensis](https://www.lustgrow.com.ar/buscar?q=bacillus) aplicado al riego
 - Nematodos (*Steinernema feltiae*)
 
 ---
@@ -41,9 +41,9 @@ Las plagas son uno de los mayores problemas del cultivo indoor. La buena noticia
 **Cómo identificarla:** Rayaduras plateadas en hojas, puntitos negros (excrementos). Muy difíciles de ver a simple vista.
 
 **Tratamiento:**
-- Trampas adhesivas azules
-- Spinosad (orgánico, muy efectivo)
-- Aceite de Neem preventivo
+- [Trampas adhesivas azules](https://www.lustgrow.com.ar/buscar?q=trampa+adhesiva)
+- [Spinosad](https://www.lustgrow.com.ar/buscar?q=spinosad) (orgánico, muy efectivo)
+- [Aceite de Neem](https://www.lustgrow.com.ar/buscar?q=aceite+neem) preventivo
 
 ---
 
@@ -51,7 +51,7 @@ Las plagas son uno de los mayores problemas del cultivo indoor. La buena noticia
 **Cómo identificarlos:** Colonias de insectos verde, negro o marrón en brotes y envés de hojas. Dejan melaza pegajosa.
 
 **Tratamiento:**
-- Jabón potásico
+- [Jabón potásico](https://www.lustgrow.com.ar/buscar?q=jabon+potasico)
 - Agua a presión en las colonias
 - Predadores: mariquitas o *Aphidius colemani*
 
@@ -67,15 +67,15 @@ SIEMPRE: Trampas adhesivas amarillas activas
 
 ---
 
-## Productos orgánicos esenciales en tu botiquín grow
+## 🛒 Productos orgánicos esenciales en tu botiquín grow
 
-| Producto | Uso | Frecuencia |
-|---------|-----|-----------|
-| Aceite de Neem | Preventivo/curativo (ácaros, mosca, trips) | Cada 5-7 días |
-| Jabón potásico | Preventivo/curativo (pulgones, araña roja) | Según necesidad |
-| Bacillus thuringiensis | Mosca fungosa, mosquito | Riego semanal |
-| Spinosad | Trips, larvas | Cada 7 días |
-| Trampas adhesivas | Monitoreo y control | Permanente |
+| Producto | Uso | Frecuencia | Link |
+|---------|-----|-----------|------|
+| Aceite de Neem | Preventivo/curativo (ácaros, mosca, trips) | Cada 5-7 días | [Comprar →](https://www.lustgrow.com.ar/buscar?q=aceite+neem) |
+| Jabón potásico | Preventivo/curativo (pulgones, araña roja) | Según necesidad | [Comprar →](https://www.lustgrow.com.ar/buscar?q=jabon+potasico) |
+| Bacillus thuringiensis | Mosca fungosa, mosquito | Riego semanal | [Comprar →](https://www.lustgrow.com.ar/buscar?q=bacillus) |
+| Spinosad | Trips, larvas | Cada 7 días | [Comprar →](https://www.lustgrow.com.ar/buscar?q=spinosad) |
+| Trampas adhesivas | Monitoreo y control | Permanente | [Comprar →](https://www.lustgrow.com.ar/buscar?q=trampa+adhesiva) |
 
 ---
 
@@ -85,7 +85,7 @@ SIEMPRE: Trampas adhesivas amarillas activas
 2. **Higiene:** ropa limpia al entrar al grow, sin mascotas
 3. **Ventilación constante:** las plagas odian el movimiento de aire
 4. **Humedad controlada:** la araña roja no prospera sobre 60% HR
-5. **Inspección semanal** con lupa de aumento
+5. **Inspección semanal** con [lupa de aumento](https://www.lustgrow.com.ar/buscar?q=lupa)
 
 ---
 
