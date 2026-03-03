@@ -24,7 +24,7 @@ Doblamos suavemente las ramas y las atamos para mantenerlas horizontales. La pla
 ### Cómo hacerlo
 
 1. Cuando la planta tenga 4-6 nudos, comenzá a atar el tallo principal hacia un lado
-2. Usá [ganchos de alambre suave, cinta de tela o espirales de silicona para LST](https://www.lustgrow.com.ar/buscar?q=lst+clips)
+2. Usá [ganchos de alambre suave, cinta de tela o espirales de silicona para LST](https://www.lustgrow.com.ar/search?q=lst+clips)
 3. Atá las ramas secundarias para que apunten hacia afuera y hacia abajo
 4. **Ajustá los lazos cada 2-3 días** durante el vegetativo activo
 
@@ -33,7 +33,7 @@ Doblamos suavemente las ramas y las atamos para mantenerlas horizontales. La pla
 - Ideal para cepas sensibles al estrés
 - Compatible con plantas en macetas pequeñas
 
-> 🛒 **[Ver accesorios para LST →](https://www.lustgrow.com.ar/buscar?q=lst)**
+> 🛒 **[Ver accesorios para LST →](https://www.lustgrow.com.ar/search?q=lst)**
 
 ---
 
@@ -45,7 +45,7 @@ Cortamos el nudo de crecimiento apical para dividir un cola en dos. Con múltipl
 ### Cómo hacerlo
 
 1. Esperá a que la planta tenga **5-6 nudos** bien desarrollados
-2. Con [tijera desinfectada](https://www.lustgrow.com.ar/buscar?q=tijera+poda), cortá el tallo principal **entre el 5° y 6° nudo**
+2. Con [tijera desinfectada](https://www.lustgrow.com.ar/search?q=tijera+poda), cortá el tallo principal **entre el 5° y 6° nudo**
 3. Las dos yemas que quedan debajo del corte se convertirán en dos nuevos tops
 4. Repetí el proceso en cada top nuevo para multiplicar (FIM/manifold)
 
@@ -55,7 +55,7 @@ Cortamos el nudo de crecimiento apical para dividir un cola en dos. Con múltipl
 - Si la planta está estresada o enferma
 - En Autoflorecientes (usar LST en su lugar)
 
-> 🛒 **[Ver tijeras de poda y cultivo →](https://www.lustgrow.com.ar/buscar?q=tijera)**
+> 🛒 **[Ver tijeras de poda y cultivo →](https://www.lustgrow.com.ar/search?q=tijera)**
 
 ---
 
@@ -65,11 +65,11 @@ Cortamos el nudo de crecimiento apical para dividir un cola en dos. Con múltipl
 Colocamos una malla horizontal sobre las plantas y guiamos las ramas a través de los cuadros para crear un "colchón verde" uniforme a la misma altura.
 
 ### Materiales necesarios
-- **[Malla SCROG](https://www.lustgrow.com.ar/buscar?q=malla+scrog)** de 5x5 cm o 10x10 cm (cuerda, plástico o mallasombra)
+- **[Malla SCROG](https://www.lustgrow.com.ar/search?q=malla+scrog)** de 5x5 cm o 10x10 cm (cuerda, plástico o mallasombra)
 - Soportes para la malla (caños, varillas de aluminio)
 - Altura de malla: **20-30 cm sobre el borde de la maceta**
 
-> 🛒 **[Ver mallas SCROG disponibles →](https://www.lustgrow.com.ar/buscar?q=malla+scrog)**
+> 🛒 **[Ver mallas SCROG disponibles →](https://www.lustgrow.com.ar/search?q=malla+scrog)**
 
 ### Proceso SCROG
 
@@ -112,10 +112,10 @@ En el mismo espacio, un SCROG bien ejecutado puede producir **30-50% más** que 
 
 | Producto | Link |
 |---------|------|
-| Clips y accesorios LST | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=lst) |
-| Malla SCROG | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=malla+scrog) |
-| Tijeras de poda y cultivo | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=tijera) |
-| Tutores y soportes | [Ver en tienda →](https://www.lustgrow.com.ar/buscar?q=tutor) |
+| Clips y accesorios LST | [Ver en tienda →](https://www.lustgrow.com.ar/search?q=lst) |
+| Malla SCROG | [Ver en tienda →](https://www.lustgrow.com.ar/search?q=malla+scrog) |
+| Tijeras de poda y cultivo | [Ver en tienda →](https://www.lustgrow.com.ar/search?q=tijera) |
+| Tutores y soportes | [Ver en tienda →](https://www.lustgrow.com.ar/search?q=tutor) |
 
 ---
 
